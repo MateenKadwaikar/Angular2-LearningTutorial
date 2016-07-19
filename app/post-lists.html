@@ -1,0 +1,19 @@
+<div>
+    <h2>{{title}} </h2>
+   <div *ngIf=isSelectedPost>
+       <my-post-details [selectedValue] = post></my-post-details>
+    </div>
+    <ul class="posts" >
+        <li *ngFor="#post of datas" (click) = OnSelect(post)>
+            <span class="badge">{{post.id}}</span>
+            <b>
+                {{post.title}}</b>
+            <hr>
+            <span class="postBody">
+                {{post.body}}
+            </span>
+        </li>
+    </ul>
+
+    
+</div>
