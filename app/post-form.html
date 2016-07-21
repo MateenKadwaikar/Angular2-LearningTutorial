@@ -1,10 +1,12 @@
 <form (ngSubmit)="onSubmit()" #postForm="ngForm">
+ 
   <div class="form-group">
     <h2>{{selectedValue.title}} details!</h2>
     <br>
     <div><label>Id: </label>{{selectedValue.id}}</div>
     <br>
     <div><label>User Id: </label>{{selectedValue.userId}}</div>
+    <br>
     <div>
       <label>Title: </label>
       <input [(ngModel)]="selectedValue.title" placeholder="Title" ngControl="title" #title="ngForm" />

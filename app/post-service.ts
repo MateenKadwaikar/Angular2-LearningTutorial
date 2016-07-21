@@ -9,10 +9,11 @@ import 'rxjs/Rx';
 export class PostService {
     
     private feedData : Observable<PostInterface>;
+    private _url :string;
     
-    constructor(private _http : Http){}    
-    
-     private _url = "http://jsonplaceholder.typicode.com/posts/";
+    constructor(private _http : Http){
+        this._url = "http://jsonplaceholder.typicode.com/posts/";
+    }    
     
  /*   getPosts()  : Observable<PostInterface> {
        
@@ -39,7 +40,7 @@ export class PostService {
     
     postJSON(data : PostInterface) : Observable<PostInterface> {
         let params = JSON.stringify({
-           title: data.title,
+            title: data.title,
             body: data.body,
             userId: data.userId
         });
